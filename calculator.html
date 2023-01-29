@@ -1,0 +1,46 @@
+<DOCTYPE.html>
+    <html>
+        <head>
+            <title>CALCULATOR</title>
+            
+        </head>
+<body>
+<input type="number" id="first" >
+<select id="ope">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+    <option>%</option>
+
+
+</select>
+<input type="number" id="second"><br><br>
+<button onclick="calculate()">CALCULATE</button>
+<input type="text" id="res" readonly=""/>
+
+</body>
+<script>
+    function calculate(){
+var opr1=document.getElementById("first").value;
+var opr2=document.getElementById("second").value;
+var ope=document.getElementById("ope").value;
+if(ope == '+'){
+var res=parseInt(opr1) + parseInt(opr2);
+}
+if(ope == '-'){
+var res=parseInt(opr1) - parseInt(opr2);
+}if(ope == '*'){
+var res=parseInt(opr1) * parseInt(opr2);
+}if(ope == '/'){
+var res=parseInt(opr1) / parseInt(opr2);
+}if(ope == '%'){
+var res=parseInt(opr1) % parseInt(opr2);
+}
+document.getElementById("res").value=res;
+;}
+
+
+    </script>
+</html>
+
